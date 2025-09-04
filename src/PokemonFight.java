@@ -27,16 +27,16 @@ public class PokemonFight {
         // ignore first line
         inputFileNameScanner.nextLine();
 
-        // Pokemon ArrayList (PokeDex)
+        // Pokemon LinkedList (PokeDex)
         LinkedList<Pokemon> PokeDex = new LinkedList<>();
 
-        // Read in file and store data in Pokemon ArrayList
+        // Read in file and store data in Pokemon LinkedList
         while (inputFileNameScanner.hasNext()) {
             String line = inputFileNameScanner.nextLine();
             String[] parts = line.split(",");
             Pokemon mon = new Pokemon(Integer.parseInt(parts[0]), parts[1], parts[2], parts[3], Integer.parseInt(parts[4]), Integer.parseInt(parts[5]), Integer.parseInt(parts[6]), Integer.parseInt(parts[7]), Integer.parseInt(parts[8]), Integer.parseInt(parts[9]), Integer.parseInt(parts[10]), Integer.parseInt(parts[11]), Boolean.parseBoolean(parts[12]));
             PokeDex.add(mon);
-            //System.out.println(poke); // for debugging
+            //System.out.println(mon); // for debugging
         }
         inputFileNameStream.close(); // because I care
 
